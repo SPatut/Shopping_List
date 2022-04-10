@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shoppinglist.R
 import com.example.shoppinglist.domain.ShopItem
+import com.example.shoppinglist.presentation.ShopListAdapter.Companion.MAX_POOL_SIZE
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,8 +29,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupRecyclerView(){
         val rvShopList = findViewById<RecyclerView>(R.id.rv_shop_list)
-        adapter = ShopListAdapter()
-        rvShopList.adapter = adapter
+        with(rvShopList){
+            adapter = ShopListAdapter()
+            adapter = adapter
+            recycledViewPool.setMaxRecycledViews(ShopListAdapter.VIEW_TYPE_ENABLED, MAX_POOL_SIZE)
+            recycledViewPool.setMaxRecycledViews(ShopListAdapter.VIEW_TYPE_DISABLED, MAX_POOL_SIZE)
+
+
+        }
+
     }
 
 }
