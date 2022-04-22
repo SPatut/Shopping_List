@@ -33,10 +33,10 @@ class ShopItemActivity : AppCompatActivity() {
         setContentView(R.layout.activity_shop_item)
         parseIntent()
         viewModel = ViewModelProvider(this)[ShopItemViewModel::class.java]
-        initViews()
-        addTextChangeListeners()
-        launchRightMode()
-        observeViewModel()
+//        initViews()
+//        addTextChangeListeners()
+//        launchRightMode()
+//        observeViewModel()
     }
 
     private fun observeViewModel() {
