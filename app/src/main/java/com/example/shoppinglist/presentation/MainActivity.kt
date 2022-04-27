@@ -7,8 +7,8 @@ import androidx.fragment.app.FragmentContainerView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.example.shoppinglist.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.example.shoppinglist.R
 
 class MainActivity : AppCompatActivity() {
 
