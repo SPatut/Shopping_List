@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.shoppinglist.R
 
 
-class ShopItemViewHolder(val view: View): RecyclerView.ViewHolder(view){
+class ShopItemViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
     val tvName = view.findViewById<TextView>(R.id.tv_name)
     val tvCount = view.findViewById<TextView>(R.id.tv_count)
 }
